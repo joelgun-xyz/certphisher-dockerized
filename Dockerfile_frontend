@@ -1,0 +1,21 @@
+FROM ubuntu:latest
+
+LABEL maintainer="plonxyz"
+# package versions
+
+
+# environment settings
+RUN \
+ apt-get update && \
+ apt-get upgrade -y  && apt-get install -y python3  python3-pip dos2unix&& \ 
+ apt-get install -y python3-pip && \
+ pip3 install Flask && \
+ pip3 install Flask-PyMongo 
+
+COPY ./app /app
+COPY ./run.sh /app/run.sh
+RUN chmod +x /app/run.sh
+EXPOSE 5000/tcp
+WORKDIR /app
+RUN pwd && ls -l 
+CMD ["sh","run.sh"]

@@ -1,0 +1,15 @@
+FROM ubuntu:latest
+
+LABEL maintainer="plonxyz"
+# package versions
+
+
+# environment settings
+COPY ./certphisher/requirements.txt /requirements.txt
+RUN \
+ apt-get update && apt-get install -y gcc make wget libffi-dev python-cffi  python3 python3-pip && \
+ python3 -m pip install -r requirements.txt
+
+COPY ./certphisher /certphisher
+WORKDIR /certphisher
+ENTRYPOINT [ "python3", "main.py" ]
