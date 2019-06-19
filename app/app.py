@@ -21,3 +21,7 @@ def alltime():
         sites_count = mongo.db.sites.find({"checked_vt": "true"}).count()
         return render_template("alltime.html",
                 sites=sites, sites_count = sites_count)
+
+if __name__ == '__main__':
+ app.run(host='0.0.0.0', port=5000)
+ 

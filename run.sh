@@ -1,6 +1,4 @@
 #!/bin/bash
-ls
-pwd
 cd /app
 ls
 

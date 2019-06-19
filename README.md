@@ -78,9 +78,9 @@ If you enable notifications, you get messages like this in your channel:
 Switch inside the certphisher-dockerized directory and run these commands to download and build the containers.  
 
 ```
-docker build --rm -f "Dockerfile_frontend" -t certphisher/frontend:latest .
+docker build --rm --no-cache -f "Dockerfile_frontend" -t certphisher/frontend:latest .
 
-docker build --rm -f "Dockerfile_backend" -t certphisher/backend:latest .
+docker build --rm --no-cache -f "Dockerfile_backend" -t certphisher/backend:latest .
 
 docker-compose -f "docker-compose.yml" up -d --build
 ```
