@@ -86,7 +86,14 @@ docker-compose -f "docker-compose.yml" up -d --build
 ```
 
 
+## Usage 
+
+Start Kinematic and watch your containers start correctly
+
 ![Kitematic](kitematic_certphisher.png)
+
+The webfrontend should be served over: **http://localhost:5000/**
+
 
 ## Authors
 
