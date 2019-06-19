@@ -15,10 +15,9 @@ def start():
     sites_medium_count = mongo.db.sites.find({"checked_vt": "true","certphisher_score": { "$gte" : 80, "$lt": 90}}).count()
     return render_template("index.html",
         sites=sites, sites_count = sites_count, sites_critical_count = sites_critical_count, sites_high_count = sites_high_count, sites_medium_count = sites_medium_count)
-@app.route('/hello/<name>')
-def hello(name=None):
-    return render_template('hello.html', name=name)
-
-if __name__ == '__main__':
- app.run(host='0.0.0.0', port=5000)
- 
+@app.route('/alltime')
+def alltime():
+        sites = mongo.db.sites.find({"checked_vt": "true"}).sort("_id", -1)
+        sites_count = mongo.db.sites.find({"checked_vt": "true"}).count()
+        return render_template("alltime.html",
+                sites=sites, sites_count = sites_count)
