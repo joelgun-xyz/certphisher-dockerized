@@ -94,11 +94,17 @@ Start Kinematic and watch your containers start correctly
 
 The webfrontend should be served over: **http://localhost:5000/**
 
+### Change Scoring 
+
+Just the add / change the values in the files suspicious.yaml or external.yaml with your own keyword / scores if you want to customize it. 
+
+
+![scoring_engine](scoring_engine.png)
+
 
 ## Authors
 
 * **joelgun** - [Twitter](https://twitter.com/joelgun)
-
 
 
 ## Acknowledgments
