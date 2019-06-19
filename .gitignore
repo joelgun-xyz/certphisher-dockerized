@@ -4,3 +4,6 @@ mongodb/.DS_Store
 mongodb/data/.DS_Store
 app/.DS_Store
 *.wt
+certphisher/app/.DS_Store
+*.pyc
+certphisher/.DS_Store
