@@ -102,6 +102,10 @@ Just the add / change the values in the files suspicious.yaml or external.yaml w
 ![scoring_engine](scoring_engine.png)
 
 
+## License
+This project is licensed under GNU General Public License v3.0
+
+
 ## Authors
 
 * **joelgun** - [Twitter](https://twitter.com/joelgun)
